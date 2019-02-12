@@ -28,7 +28,6 @@ class Text(object):
         can_make_sentences = parsed_sentences is not None or input_text is not None
         self.retain_original = retain_original and can_make_sentences
         self.state_size = state_size
-
         if self.retain_original:
             self.parsed_sentences = parsed_sentences or list(self.generate_corpus(input_text))
 
