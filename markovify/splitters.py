@@ -40,7 +40,7 @@ def is_sentence_ender(word):
 
 def split_into_sentences(text):
     potential_end_pat = re.compile(r"".join([
-        r"([\w\.'’&\]\)]+[\.\?!])", # A word that ends with punctuation
+        r"([\w\.'’&\]\)]+[\*\.\?!])", # A word that ends with punctuation
         r"([‘’“”'\"\)\]]*)", # Followed by optional quote/parens/etc
         r"(\s+(?![a-z\-–—]))", # Followed by whitespace + non-(lowercase or dash)
         ]), re.U)
